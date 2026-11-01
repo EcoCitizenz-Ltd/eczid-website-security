@@ -1,5 +1,5 @@
 name: "ECZ-ID Website Security"
-description: "Run the bounded ECZ-ID public website observation from CI without uploading repository source or turning the result into a security guarantee."
+description: "Run a bounded public website-security observation from CI and return one evidence-based next step."
 author: EcoCitizenz Ltd
 branding:
   icon: shield
