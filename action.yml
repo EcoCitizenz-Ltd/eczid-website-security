@@ -1,0 +1,30 @@
+name: "ECZ-ID Website Security"
+description: "Run the bounded ECZ-ID public website observation from CI without uploading repository source or turning the result into a security guarantee."
+author: EcoCitizenz Ltd
+branding:
+  icon: shield
+  color: green
+inputs:
+  website:
+    description: "Public hostname or HTTP(S) website URL to observe."
+    required: true
+  report-path:
+    description: "Path for the local JSON evidence report."
+    required: false
+    default: "eczid-website-security.json"
+outputs:
+  observation-status:
+    description: "complete, partial or not_observed."
+  currentness-status:
+    description: "Currentness posture returned by the bounded public checker."
+  unknown-count:
+    description: "Count of evidence fields that remain unknown."
+  next-action:
+    description: "Single evidence-based route code."
+  reason-codes:
+    description: "Deterministic reason-code list."
+  report-path:
+    description: "Generated local JSON report path."
+runs:
+  using: node24
+  main: dist/index.js
